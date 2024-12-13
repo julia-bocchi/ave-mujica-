@@ -92,7 +92,7 @@ css的话比较简单，主要是设定line-height，即**行高**，控制文�
 
 类似效果可以看下面的图片
 
-![c61f3803aace3170f2cc4b40ccaebc1](C:\Users\julia\Desktop\c61f3803aace3170f2cc4b40ccaebc1.png)
+![Alt Text](resource/c61f3803aace3170f2cc4b40ccaebc1.png)
 
 ## js
 
