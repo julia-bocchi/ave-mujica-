@@ -107,17 +107,45 @@ img {
 }
 /* 小于或等于768px宽的设备 */
 @media screen and (max-width: 768px) {
+    body{
+        justify-content: center;
+    }
+    .start{
+        margin-top: 5px;
+        font-size: 30px;
+    }
   .show {
-    width: 90%; /* 宽度调整为容器宽度的90% */
+    width: 100%; /* 宽度调整为容器宽度的90% */
     height: auto; /* 高度自动 */
+    margin: 15px 0;
   }
 
   .time {
-    font-size: 25px; /* 字体大小调整 */
-    line-height: 1px; /* 行高调整 */
+    font-size: 60px; /* 字体大小调整 */
+    line-height: 80px; /* 行高调整 */
   }
 
   .interval {
-    font-size: 40px; /* 字体大小调整 */
+    font-size: 20px; /* 字体大小调整 */
   }
+  .time li:nth-child(3n-2) {
+  flex: 3;
+  position: relative;
+  /* 设置数字位置 */
+  line-height: 80px;
+  height: 80px;
+  margin: 0 3px;
+  border-radius: 10px;
+  text-align: center;
+}
+.time li:nth-child(3n-1) {
+  flex: 3;
+  position: relative;
+  /* 设置数字位置 */
+ line-height: 80px;
+  height: 80px;
+  margin: 0 3px;
+  border-radius: 10px;
+  text-align: center;
+}
 }
