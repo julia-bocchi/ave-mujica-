@@ -1,100 +1,123 @@
-      @font-face {
-        font-family: mujica;
-        src: url("resource/HYJinChangTiJ.ttf");
-      }
-        *{
-            list-style-type: none;/*删掉列表的点*/
-            /* 初始化 */
-            padding: 0;
-            margin: 0;
-            
-        }
-        body{
-          background-image: url('resource/ave-mujica.png');
-          background-size: cover;
-            background-repeat: no-repeat;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        img{
-          width:37%;
-        }
-        .start{
-          font-family: mujica;
-          font-size: 100px;
-          color:rgb(187, 11, 164);
-        }
-        .show {
-            width: 1200px;
-            height: 300px;
-            position: relative;
-        }
-        .time{
-            /* 横着排 */
-            display: flex;
-            flex: 1;
-            /*设置字体大小是数字能以好的大小显示在盒子中*/
-            font-size: 150px;
-            text-align: center;
-            /* 设置ul的位置 */
-            line-height: 300px;
-            font-family: mujica;
-            color:#bb0ba4;
-            overflow: hidden;
-        }
-        .time li:nth-child(3n) {
-            flex: 1;
-        }
-        .time li:nth-child(3n-2) {
-            flex: 3;
-            position: relative;
-            /* 设置数字位置 */
-            line-height: 200px;
-            height:200px;
-            margin: auto 10px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .time li:nth-child(3n-1) {
-            flex: 3;
-            position: relative;
-            /* 设置数字位置 */
-            line-height: 200px;
-            height:200px;
-            margin: auto 10px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .time li:nth-child(3n-2) .upBox,
-        .time li:nth-child(3n-1) .upBox,
-        .time li:nth-child(3n-2) .downBox ,
-        .time li:nth-child(3n-1) .downBox{
-            position: absolute;
-            left: 0;
-            right: 0;
-            overflow: hidden;
-        }
-        .time li:nth-child(3n-2) .upBox,
-        .time li:nth-child(3n-1) .upBox {
-            top: 0;
-            bottom: 50%;
-            box-sizing: border-box;
-            background-color: rgb(142, 37, 54);
-            border-bottom: solid 3px black;
-            transform-origin: bottom;
-        }
-        .time li:nth-child(3n-2) .downBox,
-        .time li:nth-child(3n-1) .downBox {
-            top: 50%;
-            bottom: 0;
-            /* 设置数字位置 */
-            line-height: 0;
-            box-sizing: border-box;
-            background-color: rgb(90, 4, 4);
-            overflow: hidden;
-            transform-origin: top;
-        }
-        .interval{
-          font-size: 60px;
-        }
+@font-face {
+  font-family: mujica;
+  src: url("resource/HYJinChangTiJ.ttf");
+}
+* {
+  list-style-type: none; /*删掉列表的点*/
+  /* 初始化 */
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  height: 100%; /* 确保body至少占据整个视口的高度 */
+  min-height: 100vh; /* 确保body至少占据整个视口的高度 */
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("resource/ave-mujica.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+}
+img {
+  width: 37%;
+}
+.start {
+  font-family: mujica;
+  font-size: 100px;
+  color: rgb(187, 11, 164);
+}
+.show {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+}
+.time {
+  /* 横着排 */
+  display: flex;
+  flex: 1;
+  /*设置字体大小是数字能以好的大小显示在盒子中*/
+  font-size: 150px;
+  text-align: center;
+  /* 设置ul的位置 */
+  line-height: 300px;
+  font-family: mujica;
+  color: #bb0ba4;
+  overflow: hidden;
+}
+.time li:nth-child(3n) {
+  flex: 1;
+}
+.time li:nth-child(3n-2) {
+  flex: 3;
+  position: relative;
+  /* 设置数字位置 */
+  line-height: 200px;
+  height: 200px;
+  margin: auto 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.time li:nth-child(3n-1) {
+  flex: 3;
+  position: relative;
+  /* 设置数字位置 */
+  line-height: 200px;
+  height: 200px;
+  margin: auto 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.time li:nth-child(3n-2) .upBox,
+.time li:nth-child(3n-1) .upBox,
+.time li:nth-child(3n-2) .downBox,
+.time li:nth-child(3n-1) .downBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.time li:nth-child(3n-2) .upBox,
+.time li:nth-child(3n-1) .upBox {
+  top: 0;
+  bottom: 50%;
+  box-sizing: border-box;
+  background-color: rgb(142, 37, 54);
+  border-bottom: solid 3px black;
+  transform-origin: bottom;
+}
+.time li:nth-child(3n-2) .downBox,
+.time li:nth-child(3n-1) .downBox {
+  top: 50%;
+  bottom: 0;
+  /* 设置数字位置 */
+  line-height: 0;
+  box-sizing: border-box;
+  background-color: rgb(90, 4, 4);
+  overflow: hidden;
+  transform-origin: top;
+}
+.interval {
+  font-size: 60px;
+}
+/* 小于或等于768px宽的设备 */
+@media screen and (max-width: 768px) {
+  .show {
+    width: 90%; /* 宽度调整为容器宽度的90% */
+    height: auto; /* 高度自动 */
+  }
+
+  .time {
+    font-size: 25px; /* 字体大小调整 */
+    line-height: 1px; /* 行高调整 */
+  }
+
+  .interval {
+    font-size: 40px; /* 字体大小调整 */
+  }
+}
