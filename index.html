@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mujica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <img src="resource/Ave_Mujica_logo_real1.png">
-  <div class="start">距离第一话播放还有</div>
-    <div class="show">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="real">
+    <div id="start">Press any key to continue</div>
+    <div id="end">
+      <img src="resource/Ave_Mujica_logo_real1.png" />
+      <div class="start">距离第一话播放还有</div>
+      <div class="show">
         <ul class="time">
           <!-- 天 -->
-           <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li class="interval">D</li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li class="interval">D</li>
           <!-- 小时 -->
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li class="interval">H</li>
-            <!-- 分钟 -->
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li class="interval">M</li>
-            <!-- 秒 -->
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li>
-                <div class="upBox beforeTime"></div>
-                <div class="downBox beforeTime"></div>
-                <div class="upBox afterTime"></div>
-                <div class="downBox afterTime"></div>
-            </li>
-            <li class="interval">S</li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li class="interval">H</li>
+          <!-- 分钟 -->
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li class="interval">M</li>
+          <!-- 秒 -->
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li>
+            <div class="upBox beforeTime"></div>
+            <div class="downBox beforeTime"></div>
+            <div class="upBox afterTime"></div>
+            <div class="downBox afterTime"></div>
+          </li>
+          <li class="interval">S</li>
         </ul>
+      </div>
+      <audio controls>
+        <source src="resource/AveMujica_1.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
     </div>
-</body>
-<script src="time.js"></script>
+    <script src="time.js"></script>
+  </body>
 </html>

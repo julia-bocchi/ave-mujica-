@@ -8,34 +8,61 @@
   padding: 0;
   margin: 0;
 }
-html, body {
+html,
+body {
   height: 100%; /* 确保body至少占据整个视口的高度 */
   min-height: 100vh; /* 确保body至少占据整个视口的高度 */
   margin: 0;
   padding: 0;
 }
+
 body {
   background-image: url("resource/ave-mujica.png");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+}
+#start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  font-family: mujica;
+  font-size: 100px;
+  color: rgb(187, 11, 164);
+  text-align: center;
+  animation: upToDown 1s ease-in-out;
+}
 
+#end{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
 }
 img {
   width: 37%;
+  animation: upToDown 1s ease-in-out;
 }
 .start {
   font-family: mujica;
   font-size: 100px;
   color: rgb(187, 11, 164);
+  animation: downToUp 1s ease-in-out;
 }
 .show {
   width: 1200px;
   height: 300px;
   position: relative;
+  animation: downToUp 1s ease-in-out;
 }
 .time {
   /* 横着排 */
@@ -52,6 +79,7 @@ img {
 }
 .time li:nth-child(3n) {
   flex: 1;
+  margin: 0 0.4%;
 }
 .time li:nth-child(3n-2) {
   flex: 3;
@@ -87,9 +115,11 @@ img {
   top: 0;
   bottom: 50%;
   box-sizing: border-box;
-  background-color: rgb(142, 37, 54);
+  background-color: rgba(116, 0, 21, 0.5);
   border-bottom: solid 3px black;
   transform-origin: bottom;
+  box-shadow:0 25px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
 }
 .time li:nth-child(3n-2) .downBox,
 .time li:nth-child(3n-1) .downBox {
@@ -98,22 +128,24 @@ img {
   /* 设置数字位置 */
   line-height: 0;
   box-sizing: border-box;
-  background-color: rgb(90, 4, 4);
+  background-color: rgba(116, 0, 21, 0.5);
   overflow: hidden;
   transform-origin: top;
+  box-shadow:0 25px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
 }
 .interval {
   font-size: 60px;
 }
 /* 小于或等于768px宽的设备 */
 @media screen and (max-width: 768px) {
-    body{
-        justify-content: center;
-    }
-    .start{
-        margin-top: 5px;
-        font-size: 30px;
-    }
+  body {
+    justify-content: center;
+  }
+  .start {
+    margin-top: 5px;
+    font-size: 30px;
+  }
   .show {
     width: 100%; /* 宽度调整为容器宽度的90% */
     height: auto; /* 高度自动 */
@@ -129,23 +161,46 @@ img {
     font-size: 20px; /* 字体大小调整 */
   }
   .time li:nth-child(3n-2) {
-  flex: 3;
-  position: relative;
-  /* 设置数字位置 */
-  line-height: 80px;
-  height: 80px;
-  margin: 0 3px;
-  border-radius: 10px;
-  text-align: center;
+    flex: 3;
+    position: relative;
+    /* 设置数字位置 */
+    line-height: 80px;
+    height: 80px;
+    margin: 0 3px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .time li:nth-child(3n-1) {
+    flex: 3;
+    position: relative;
+    /* 设置数字位置 */
+    line-height: 80px;
+    height: 80px;
+    margin: 0 3px;
+    border-radius: 10px;
+    text-align: center;
+  }
 }
-.time li:nth-child(3n-1) {
-  flex: 3;
-  position: relative;
-  /* 设置数字位置 */
- line-height: 80px;
-  height: 80px;
-  margin: 0 3px;
-  border-radius: 10px;
-  text-align: center;
+@keyframes downToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
+@keyframes upToDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+audio{
+  opacity: 0;
 }

@@ -275,3 +275,11 @@ let changeTime = () => {
   setTimeout(changeTime, 1000);
 };
 changeTime();
+let music = document.querySelector("audio");
+let start = document.querySelector("#start");
+let div = document.querySelector('#end');
+start.addEventListener('click',function(){
+  start.style.display = 'none';
+  div.style.display = 'flex';
+  music.play();
+})
